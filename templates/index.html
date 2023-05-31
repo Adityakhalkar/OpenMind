@@ -4,9 +4,9 @@
 		<title>OpenMind</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="stylesheet" type='text/css' href='{{ url_for('static', filename='css/main.css') }}' >
+		<noscript><link rel="stylesheet" href='{{url_for( 'static', filename='css/noscript.css') }}' /></noscript>
+		<link rel="icon" type="image/x-icon" href='{{url_for('static', filename='images/favicon.ico')}}'>
 	</head>
 	<body class="is-preload">
 
@@ -14,7 +14,7 @@
 			<section id="sidebar">
 				<div class="inner" >
 					<nav>
-						<img src = "images/logo.png" alt = "logo.png" width="250" height="250" style="position: absolute; top: 0; left: 0; width: 100%;">
+						<img src = "{{url_for('static',filename='images/logo.png')}}" alt = "logo.png" width="250" height="250" style="position: absolute; top: 0; left: 0; width: 100%;">
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">What is this?</a></li>
@@ -24,7 +24,6 @@
 					</nav>
 				</div>
 			</section>
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -42,7 +41,7 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/77759.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="{{url_for('static',filename='images/77759.jpg')}}" alt="" data-position="center center" /></a>
 							<div class="content">	
 								<div class="inner">
 									<h2>Using AI for education</h2>
@@ -54,7 +53,7 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/1936.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="{{url_for('static',filename='images/1936.jpg')}}" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Design your Syllabus</h2>
@@ -66,7 +65,7 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/12345.gif" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="{{url_for('static',filename='images/12345.gif')}}" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Test your knowledge, not your serving skills</h2>
@@ -191,13 +190,15 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+			
+<lottie-player src="{{url_for('static', filename='https://assets7.lottiefiles.com/packages/lf20_9axmwjuCnT.json')}}"  background="transparent"  speed="0.3"  style="width: 300px; height: 300px;" hover loop controls autoplay></lottie-player>
 
 	</body>
 </html>
