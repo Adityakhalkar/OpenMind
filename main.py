@@ -21,7 +21,7 @@ def login():
     if request.method == "POST":
         username = request.form["usr"]
         password = request.form["pswd"]
-        if username == "MeekOmni" and password == "78adi966tya@43":
+        if username == "MeekOmni" and password == "thisisrandompass":
             return redirect('/rajasthani')
         else:
             return redirect('/index')
